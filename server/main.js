@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const recipeRoute = require('./routes/recipe');
 
+const db = require('./db/sql/createDb');
+
+db.createDb();
 const app = express();
 
 app.use(cors());
